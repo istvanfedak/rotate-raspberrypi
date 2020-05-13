@@ -1,0 +1,11 @@
+# this is the service configuration file for the access point handler
+[Unit]
+Description=API endpoint for rotating RaspberryPi
+
+[Service]
+ExecStart=/usr/bin/node /usr/local/rotate-display/rotate-display.js
+Restart=always
+Environment="PATH=/bin:/usr/bin"
+
+[Install]
+WantedBy=multi-user.target
